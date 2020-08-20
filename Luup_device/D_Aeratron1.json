@@ -1,0 +1,399 @@
+{
+    "flashicon": "https://a-lurker.github.io/icons/Aeratron_50_50.png",
+    "default_icon": "https://a-lurker.github.io/icons/Aeratron_50_50.png",
+    "inScene": "1",
+    "DisplayStatus": {},
+    "doc_url": {
+        "doc_language": 1,
+        "doc_manual": 1,
+        "doc_version": 1,
+        "doc_platform": 0,
+        "doc_page": "devices"
+    },
+    "Tabs": [
+        {
+            "Label": {
+                "lang_tag": "tabname_control",
+                "text": "Control"
+            },
+            "Position": "0",
+            "TabType": "flash",
+            "SceneGroup": [
+                {
+                    "id": "1",
+                    "top": "0",
+                    "left": "0",
+                    "x": "1",
+                    "y": "1"
+                },
+                {
+                    "id": "2",
+                    "top": "1",
+                    "left": "0",
+                    "x": "1",
+                    "y": "1"
+                },
+                {
+                    "id": "3",
+                    "top": "2",
+                    "left": "0",
+                    "x": "1",
+                    "y": "1"
+                },
+                {
+                    "id": "4",
+                    "top": "0",
+                    "left": "1",
+                    "x": "1",
+                    "y": "1"
+                },
+                {
+                    "id": "5",
+                    "top": "1",
+                    "left": "1",
+                    "x": "1",
+                    "y": "1"
+                },
+                {
+                    "id": "6",
+                    "top": "2",
+                    "left": "1",
+                    "x": "1",
+                    "y": "1"
+                },
+                {
+                    "id": "7",
+                    "top": "-0.9",
+                    "left": "-1.13",
+                    "x": "1",
+                    "y": "1"
+                },
+                {
+                    "id": "8",
+                    "top": "-0.4",
+                    "left": "-1.13",
+                    "x": "1",
+                    "y": "1"
+                }
+            ],
+            "ControlGroup": [
+                {
+                    "id": "1",
+                    "scenegroup": "1",
+                    "isSingle": "1"
+                },
+                {
+                    "id": "2",
+                    "scenegroup": "2",
+                    "isSingle": "1"
+                },
+                {
+                    "id": "3",
+                    "scenegroup": "3",
+                    "isSingle": "1"
+                },
+                {
+                    "id": "4",
+                    "scenegroup": "4",
+                    "isSingle": "1"
+                },
+                {
+                    "id": "5",
+                    "scenegroup": "5",
+                    "isSingle": "1"
+                },
+                {
+                    "id": "6",
+                    "scenegroup": "6",
+                    "isSingle": "1"
+                },
+                {
+                    "id": "7",
+                    "scenegroup": "7",
+                    "isSingle": "1"
+                },
+                {
+                    "id": "8",
+                    "scenegroup": "8",
+                    "isSingle": "1"
+                }
+            ],
+            "Control": [
+                {
+                    "ControlType": "label",
+                    "Label": {
+                        "text": "Power:"
+                    },
+                    "Display": {
+                        "Top": 30,
+                        "Left": 50,
+                        "Width": 100,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlType": "variable",
+                    "Display": {
+                        "Service": "urn:upnp-org:serviceId:SwitchPower1",
+                        "Variable": "Status",
+                        "Top": 30,
+                        "Left": 90,
+                        "Width": 50,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "1",
+                    "ControlType": "label",
+                    "Label": {
+                        "text": "Speed:"
+                    },
+                    "top": 0.6,
+                    "Display": {
+                        "Top": 30,
+                        "Left": 170,
+                        "Width": 50,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "2",
+                    "ControlType": "variable",
+                    "Display": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Variable": "Speed",
+                        "Top": 30,
+                        "Left": 210,
+                        "Width": 50,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlType": "label",
+                    "Label": {
+                        "text": "Air direction:"
+                    },
+                    "Display": {
+                        "Top": 30,
+                        "Left": 290,
+                        "Width": 100,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlType": "variable",
+                    "Display": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Variable": "Direction",
+                        "Top": 30,
+                        "Left": 360,
+                        "Width": 50,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlGroup": "3",
+                    "ControlType": "button",
+                    "Label": {
+                        "text": "Power on"
+                    },
+                    "Display": {
+                        "Service": "urn:upnp-org:serviceId:SwitchPower1",
+                        "Variable": "Power",
+                        "Value": "1",
+                        "Top": 50,
+                        "Left": 50,
+                        "Width": 100,
+                        "Height": 20
+                    },
+                    "Command": {
+                        "Service": "urn:upnp-org:serviceId:SwitchPower1",
+                        "Action": "SetTarget",
+                        "Parameters": [
+                            {
+                                "Name": "newTargetValue",
+                                "Value": "1"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "ControlGroup": "4",
+                    "ControlType": "button",
+                    "Label": {
+                        "text": "Power off"
+                    },
+                    "Display": {
+                        "Service": "urn:upnp-org:serviceId:SwitchPower1",
+                        "Variable": "Power",
+                        "Value": "0",
+                        "Top": 75,
+                        "Left": 50,
+                        "Width": 100,
+                        "Height": 20
+                    },
+                    "Command": {
+                        "Service": "urn:upnp-org:serviceId:SwitchPower1",
+                        "Action": "SetTarget",
+                        "Parameters": [
+                            {
+                                "Name": "newTargetValue",
+                                "Value": "0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "ControlGroup": "5",
+                    "ControlType": "button",
+                    "Label": {
+                        "text": "Speed up"
+                    },
+                    "Display": {
+                        "Top": 50,
+                        "Left": 170,
+                        "Width": 100,
+                        "Height": 20
+                    },
+                    "Command": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Action": "SpeedUpDown",
+                        "Parameters": [
+                            {
+                                "Name": "UpDown",
+                                "Value": "Up"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "ControlGroup": "6",
+                    "ControlType": "button",
+                    "Label": {
+                        "text": "Speed down"
+                    },
+                    "Display": {
+                        "Top": 75,
+                        "Left": 170,
+                        "Width": 100,
+                        "Height": 20
+                    },
+                    "Command": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Action": "SpeedUpDown",
+                        "Parameters": [
+                            {
+                                "Name": "UpDown",
+                                "Value": "Down"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "ControlGroup": "7",
+                    "ControlType": "button",
+                    "Label": {
+                        "text": "Air up"
+                    },
+                    "Display": {
+                        "Top": 50,
+                        "Left": 290,
+                        "Width": 100,
+                        "Height": 20
+                    },
+                    "Command": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Action": "AirUpDown",
+                        "Parameters": [
+                            {
+                                "Name": "UpDown",
+                                "Value": "Up"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "ControlGroup": "8",
+                    "ControlType": "button",
+                    "Label": {
+                        "text": "Air down"
+                    },
+                    "Display": {
+                        "Top": 75,
+                        "Left": 290,
+                        "Width": 100,
+                        "Height": 20
+                    },
+                    "Command": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Action": "AirUpDown",
+                        "Parameters": [
+                            {
+                                "Name": "UpDown",
+                                "Value": "Down"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "ControlType": "label",
+                    "Label": {
+                        "text": "Plugin version:"
+                    },
+                    "Display": {
+                        "Top": 110,
+                        "Left": 50,
+                        "Width": 100,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlType": "variable",
+                    "Display": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Variable": "PluginVersion",
+                        "Top": 110,
+                        "Left": 170,
+                        "Width": 50,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlType": "label",
+                    "Label": {
+                        "text": "Fan dipswitch code:"
+                    },
+                    "Display": {
+                        "Top": 125,
+                        "Left": 50,
+                        "Width": 100,
+                        "Height": 20
+                    }
+                },
+                {
+                    "ControlType": "variable",
+                    "Display": {
+                        "Service": "urn:a-lurker-com:serviceId:Aeratron1",
+                        "Variable": "DipSwitch",
+                        "Top": 125,
+                        "Left": 170,
+                        "Width": 50,
+                        "Height": 20
+                    }
+                }
+            ]
+        },
+        {
+            "Label": {
+                "lang_tag": "advanced",
+                "text": "Advanced"
+            },
+            "Position": "2",
+            "TabType": "javascript",
+            "ScriptName": "shared.js",
+            "Function": "advanced_device"
+        }
+    ],
+    "DeviceType": "urn:schemas-a-lurker-com:device:Aeratron:1",
+    "device_type": "urn:schemas-a-lurker-com:device:Aeratron:1"
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<scpd xmlns="urn:schemas-upnp-org:service-1-0">
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+
+    <serviceStateTable>
+        <stateVariable sendEvents="no">
+        <name>A_ARG_TYPE_DipSwitch</name>
+        <shortCode>dipSwitch</shortCode>
+        <dataType>string</dataType>
+        </stateVariable>
+
+        <stateVariable sendEvents="no">
+        <name>A_ARG_TYPE_UpDown_2</name>
+        <shortCode>direction2</shortCode>
+        <dataType>string</dataType>
+        </stateVariable>
+
+        <stateVariable sendEvents="no">
+        <name>A_ARG_TYPE_Speed</name>
+        <shortCode>speed</shortCode>
+        <dataType>string</dataType>
+        </stateVariable>
+
+        <stateVariable sendEvents="no">
+        <name>A_ARG_TYPE_UpDown</name>
+        <shortCode>upDown</shortCode>
+        <dataType>string</dataType>
+        </stateVariable>
+
+        <stateVariable sendEvents="no">
+        <name>A_ARG_TYPE_NewTargetValue</name>
+        <shortCode>newTargetValue</shortCode>
+        <dataType>string</dataType>
+        </stateVariable>
+
+    </serviceStateTable>
+
+    <actionList>
+        <action>
+            <name>SetDipSwitch</name>
+            <argumentList>
+                <argument>
+                    <name>DipSwitch</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>A_ARG_TYPE_DipSwitch</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>AirUpDown</name>
+            <argumentList>
+                <argument>
+                    <name>UpDown</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>A_ARG_TYPE_UpDown_2</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>SetSpeed</name>
+            <argumentList>
+                <argument>
+                    <name>Speed</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>A_ARG_TYPE_Speed</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>SpeedUpDown</name>
+            <argumentList>
+                <argument>
+                    <name>UpDown</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>A_ARG_TYPE_UpDown</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+        <action>
+            <name>SetLightOnOff</name>
+            <argumentList>
+                <argument>
+                    <name>newTargetValue</name>
+                    <direction>in</direction>
+                    <relatedStateVariable>A_ARG_TYPE_NewTargetValue</relatedStateVariable>
+                </argument>
+            </argumentList>
+        </action>
+    </actionList>
+</scpd>

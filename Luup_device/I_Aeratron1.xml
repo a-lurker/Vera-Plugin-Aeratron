@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<implementation>
+    <specVersion>
+        <major>1</major>
+        <minor>0</minor>
+    </specVersion>
+    <files>L_Aeratron1.lua</files>
+    <startup>luaStartUp</startup>
+    <actionList>
+        <action>
+        <serviceId>urn:a-lurker-com:serviceId:Aeratron1</serviceId>
+        <name>SetDipSwitch</name>
+        <run>setDipSwitch(lul_settings.DipSwitch)</run>
+        </action>
+
+        <action>
+        <serviceId>urn:a-lurker-com:serviceId:Aeratron1</serviceId>
+        <name>AirUpDown</name>
+        <run>airUpDown(lul_settings.UpDown)</run>
+        </action>
+
+        <action>
+        <serviceId>urn:a-lurker-com:serviceId:Aeratron1</serviceId>
+        <name>SetSpeed</name>
+        <run>setSpeed(lul_settings.Speed)</run>
+        </action>
+
+        <action>
+        <serviceId>urn:a-lurker-com:serviceId:Aeratron1</serviceId>
+        <name>SpeedUpDown</name>
+        <run>speedUpDown(lul_settings.UpDown)</run>
+        </action>
+
+        <action>
+        <serviceId>urn:upnp-org:serviceId:SwitchPower1</serviceId>
+        <name>SetTarget</name>
+        <run>setFanOnOff(lul_settings.newTargetValue)</run>
+        </action>
+
+        <action>
+        <serviceId>urn:a-lurker-com:serviceId:Aeratron1</serviceId>
+        <name>SetTarget</name>
+        <run>setLightOnOff(lul_settings.newTargetValue)</run>
+        </action>
+    </actionList>
+</implementation>

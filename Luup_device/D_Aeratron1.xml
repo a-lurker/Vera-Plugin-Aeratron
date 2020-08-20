@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+    <specVersion>
+      <major>1</major>
+      <minor>0</minor>
+    </specVersion>
+
+    <device>
+        <deviceType>urn:schemas-a-lurker-com:device:Aeratron:1</deviceType>
+        <friendlyName>Aeratron Fan</friendlyName>
+        <staticJson>D_Aeratron1.json</staticJson>
+        <modelDescription>Aeratron fan</modelDescription>
+        <modelName>Aeratron RF remote</modelName>
+        <modelNumber>1.0</modelNumber>
+        <Category_Num>11</Category_Num>
+        <handleChildren>1</handleChildren>
+
+        <serviceList>
+            <service>
+                <serviceType>urn:schemas-a-lurker-com:service:Aeratron:1</serviceType>
+                <serviceId>urn:a-lurker-com:serviceId:Aeratron1</serviceId>
+                <SCPDURL>S_Aeratron1.xml</SCPDURL>
+            </service>
+            <service>
+              <serviceType>urn:schemas-upnp-org:service:SwitchPower:1</serviceType>
+              <serviceId>urn:upnp-org:serviceId:SwitchPower1</serviceId>
+              <SCPDURL>S_SwitchPower1.xml</SCPDURL>
+            </service>
+        </serviceList>
+
+        <implementationList>
+            <implementationFile>I_Aeratron1.xml</implementationFile>
+        </implementationList>
+
+    </device>
+</root>
